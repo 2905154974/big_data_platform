@@ -1,0 +1,55 @@
+#server:
+#  port: 8081
+#spring:
+#  #数据库连接配置
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost/diancan?characterEncoding=utf-8&useSSL=false&serverTimeZone=UTC&useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true
+#    username: root
+#    password: 0811
+
+#mybatis的相关配置
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mybatis/mapper/*.xml #映射文件地址
+  config-location: classpath:mybatis/mybatis-config.xml #全局配置文件地址
+  type-aliases-package: com.qcl.bean
+  #开启驼峰命名
+#  configuration:
+#    map-underscore-to-camel-case: true
+
+#eureka:
+#  instance:
+#    prefer-ip-address: false #非本机需要启动ip
+#  #    instance-id: ${eureka.instance.ip-address}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+#  #    ip-address: 192.168.1.130
+#  client:
+#    serviceUrl:
+#      defaultZone: http://eureka-peer1:8761/eureka/,http://eureka-peer1:8762/eureka/,http://eureka-peer1:8763/eureka/,http://eureka-peer1:8764/eureka/,http://eureka-peer1:8765/eureka/
+#    fetch-registry: true
+#    register-with-eureka: true
+##        - http://eureka-peer3:8763/eureka/
+##        - http://eureka-peer2:8762/eureka/
+##        - http://eureka-peer1:8761/eureka/
+#server:
+#  port: 8655
+#spring:
+#  application:
+#    name: service-batch-client-nyb
+#  cloud:
+#    inetutils:
+#      timeout-seconds: 10
+#  redis:
+#    cluster:
+#      nodes: 192.168.1.221:6379,192.168.1.221:7001,192.168.1.221:7002,192.168.1.221:7003,192.168.1.221:7004,192.168.1.221:7005,192.168.1.221:7006
+#      timeout: 2000
+#      max-redirects: 7
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml #全局配置文件地址
+#  mapper-locations: classpath:mybatis/mapper/*.xml #映射文件地址
+#
+#---
+#spring:
+#  profiles: 8656
+#server:
+#  port: 8656
